@@ -6,6 +6,8 @@ This document describes the analytical methodology used to identify and estimate
 
 The methodology is implemented in R and applied consistently across the donor CRS script, the child-focused ODA summary script, the multilateral CRS script, and the MUMS imputation script.
 
+The scripted pipeline produces compiled analytical outputs; final analysis and charts were prepared in Excel from those compiled outputs and are shared separately.
+
 ---
 
 ## Analytical Objective
@@ -55,7 +57,7 @@ Optional reference file lookups are also available in the donor script and CF su
 ## Processing Overview
 
 ### Donor CRS pipeline
-The donor script:
+The donor script (`scripts/01_donor_classification.R`):
 - loads CRS Parquet data
 - optionally filters by donor name
 - filters to ODA flows
@@ -66,7 +68,7 @@ The donor script:
 - exports a non-aggregated CSV
 
 ### Multilateral CRS pipeline
-The multilateral script:
+The multilateral script (`scripts/03_multilateral_classification.R`):
 - loads CRS Parquet data
 - filters to multilateral donor entities
 - applies the same classification logic as the donor script
@@ -75,7 +77,7 @@ The multilateral script:
 - exports aggregated outputs
 
 ### Child-focused ODA summary pipeline
-The CF summary script (`UNICEF CF Summary 04-2026.R`):
+The CF summary script (`scripts/02_cf_summary.R`):
 - loads CRS Parquet data
 - filters early to DAC and EU Institutions donors using a reference file
 - filters to ODA flows and years from 2014 onward
@@ -83,11 +85,11 @@ The CF summary script (`UNICEF CF Summary 04-2026.R`):
 - applies the Australia SDG exclusion rule and stores the adjusted summary flag as `c_summary_australia_sdg_adjusted`
 - aggregates to donor × year pivot tables covering total ODA, child-focused ODA, child-focused share of total ODA, and child-focused share of all-donor child-focused ODA
 - builds sector-level breakdowns for education, health, humanitarian, WATSAN, nutrition, and social protection
-- exports a 12-tab Excel workbook and a supporting CSV to `Output/`
+- exports a 12-tab Excel workbook and a supporting CSV to `output/`
 - optionally appends supplementary reference fields (these are add-ons; see Reference files above)
 
 ### MUMS imputation pipeline
-The MUMS script:
+The MUMS script (`scripts/04_mums_imputation.R`):
 - loads core contribution data
 - maps MUMS channels to CRS multilateral donors
 - joins CRS-derived multilateral child-focus shares
@@ -108,7 +110,7 @@ The donor CRS script is not an input to this multilateral imputation sequence.
 
 ## Classification Framework
 
-## 1. Purpose Codes
+### 1. Purpose Codes
 
 Certain CRS purpose codes are treated as directly child-relevant and therefore trigger `c_purpose = "Y"`.
 
@@ -142,7 +144,7 @@ These exclusions reflect an explicit targeting framework rather than a welfare-i
 
 ---
 
-## 2. Channels of Delivery
+### 2. Channels of Delivery
 
 `c_channel = "Y"` is assigned using two mechanisms:
 
@@ -162,13 +164,13 @@ This is used to identify organisations with a strong child-related mandate, incl
 
 ---
 
-## 3. Donor-Type Code
+### 3. Donor-Type Code
 
 `c_donor_type = "Y"` is currently assigned when `donor_code == 963`, corresponding to UNICEF.
 
 ---
 
-## 4. Policy Marker
+### 4. Policy Marker
 
 `c_marker = "Y"` is assigned when the `rmnch` marker equals:
 - `1` = significant
@@ -176,7 +178,7 @@ This is used to identify organisations with a strong child-related mandate, incl
 
 ---
 
-## 5. SDG Focus
+### 5. SDG Focus
 
 `c_sdg = "Y"` is assigned when the `sd_gfocus` field contains one or more exact-token matches from the selected list:
 - `3.1` Reduce maternal mortality
@@ -193,7 +195,7 @@ Matching is exact-token rather than substring-based. This avoids false matches s
 
 ---
 
-## 6. Keyword Methodology
+### 6. Keyword Methodology
 
 ### Text preparation
 Keyword matching is applied to a combined text field built from:
