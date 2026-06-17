@@ -448,9 +448,9 @@ This analytical pipeline is designed to meet the standards of a reproducible ana
 - ✅ Methodological decisions documented inline (purpose code exclusions, keyword precision/recall notes, WATSAN rule rationale)
 - ✅ Keyword dictionaries encoded in code with language-gating logic
 - ✅ Modular classification structure (purpose codes, channels, markers, keywords, SDGs as separate flags)
-- ⏳ File paths are hardcoded — conversion to relative paths pending
-- ⏳ Git version control not yet initialised — planned
-- ⏳ Repository to be published under [github.com/unicef-drp](https://github.com/unicef-drp/) subject to internal clearance
+- ✅ File paths use relative paths — portable across machines
+- ✅ Git version control initialised
+- ✅ Repository published at [github.com/CRS-Data-scripts/UNICEF_CRS_Methodology](https://github.com/CRS-Data-scripts/UNICEF_CRS_Methodology)
 
 **Execution order for multilateral imputation outputs:**
 1. Run `Scripts/UNICEF Multilateral script 27-02-2026.R` to produce `Output/c_crs_multi_aggregated_parquet_wide.csv`.
