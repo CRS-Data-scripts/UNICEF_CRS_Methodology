@@ -113,7 +113,7 @@ The donor CRS script is not an input to this multilateral imputation workflow.
 Script: `scripts/02_cf_summary.R`
 
 ### Purpose
-Produces an all-donor × year summary of child-focused ODA across DAC and EU Institutions donors, exported as a 12-tab Excel workbook. Runs independently on the full CRS dataset.
+Produces an all-donor × year summary of child-focused ODA across DAC and EU Institutions donors, exported as a 24-tab Excel workbook. Runs independently on the full CRS dataset.
 
 ### Main steps
 1. Loads CRS parquet data and trims to required columns.
@@ -128,7 +128,7 @@ Produces an all-donor × year summary of child-focused ODA across DAC and EU Ins
    - child-focused ODA as a percentage of total ODA,
    - child-focused ODA as a percentage of all-donor child-focused ODA.
 8. Builds equivalent sector-level breakdowns for each classified sector.
-9. Exports a 12-tab Excel workbook (`Output/c_cf_summary_*.xlsx`) and a supporting pivot CSV.
+9. Exports a 24-tab Excel workbook (`Output/c_cf_summary_*.xlsx`) and a supporting pivot CSV.
 
 ### Notes
 - Runs independently on the full CRS dataset — not dependent on the donor or multilateral script outputs.
