@@ -1,4 +1,6 @@
-# UNICEF Child-Focused ODA Analytical Pipeline (27-02-2026)
+# UNICEF Child-Focused ODA Analytical Pipeline 
+Version date: 27-02-2026
+Last updated: 17-06-2026
 
 This repository contains four core R scripts implementing a reproducible analytical pipeline to identify and estimate child-focused Official Development Assistance (ODA) using OECD DAC Creditor Reporting System (CRS) data. The pipeline is designed to be deterministic: applying the same methodology to the same input data will always produce identical results.
 
