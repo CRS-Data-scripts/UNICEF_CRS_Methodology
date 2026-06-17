@@ -2,14 +2,16 @@
 
 This repository contains four core R scripts implementing a reproducible analytical pipeline to identify and estimate child-focused Official Development Assistance (ODA) using OECD DAC Creditor Reporting System (CRS) data. The pipeline is designed to be deterministic: applying the same methodology to the same input data will always produce identical results.
 
-> **Note:** File paths in the scripts are currently hardcoded to a local machine (see `parquet_file_path` and `base_path` variables). Conversion to relative paths is planned as part of the move to a fully portable, version-controlled repository.
+> **Portability:** Scripts in this repository use project-relative paths and are portable across machines.
 
-> **Input data:** The CRS Parquet file is not included in this repository. It must be downloaded separately from the [OECD Data Explorer](https://data-explorer.oecd.org/). In the Data Explorer, open **CRS: Creditor Reporting System (flows)**, choose **Download**, and select the **Parquet** version of the flows file. Place the downloaded file at the path specified in the script's `parquet_file_path` variable.
+> **Input data:** The CRS Parquet file is not included in this repository. It must be downloaded separately from the [OECD Data Explorer](https://data-explorer.oecd.org/). In the Data Explorer, open **CRS: Creditor Reporting System (flows)**, choose **Download**, and select the **Parquet** version of the flows file. Place the downloaded file in `input/` as `CRS.parquet`.
+
+> **Scope of coded pipeline:** Scripts in this repository generate compiled analytical outputs. Final analysis and charts were prepared in Excel from those compiled outputs and are shared separately.
 
 ---
 
 ## 1) Donor Script
-Script: `Scripts/UNICEF Donor Script Full.R`
+Script: `scripts/01_donor_classification.R`
 
 ### Purpose
 Builds a non-aggregated donor-level CRS output with child-focus classification flags.
@@ -36,13 +38,13 @@ Builds a non-aggregated donor-level CRS output with child-focus classification f
 ### Notes
 - SDG matching uses exact token logic to avoid partial false matches (e.g., `3.1` does not match `3.10`).
 - Selected purpose codes reflect an explicit targeting framework for this iteration.
-- A donor-specific SDG exclusion rule is configurable via `donors_apply_sdg_exclusion_rule`. When a donor is listed, records flagged only by `c_sdg` (with no supporting purpose, channel, donor-type, marker, or keyword flag) are excluded from `c_summary`. This is currently set to `c("Australia")`. A legacy Australia-specific standalone variant (`Scripts/UNICEF Donor Script PARQUET DK 27-02-2026_Australia_SDG_edit.R`) implements the same logic via a separate script.
+- A donor-specific SDG exclusion rule is configurable via `donors_apply_sdg_exclusion_rule`. When a donor is listed, records flagged only by `c_sdg` (with no supporting purpose, channel, donor-type, marker, or keyword flag) are excluded from `c_summary`. This is currently set to `c("Australia")`. A legacy Australia-specific standalone variant in earlier local workflow files implements the same logic via a separate script.
 - Optional reference file lookups can be appended to the output (donor type, channel aggregates, income group, sector aggregates, region aggregates, climate type, bilateral allocable status) via the `include_reference_files` setting. These are add-ons and do not affect the core classification.
 
 ---
 
 ## 2) Multilateral Script
-Script: `Scripts/UNICEF Multilateral script 27-02-2026.R`
+Script: `scripts/03_multilateral_classification.R`
 
 ### Purpose
 Builds a multilateral-focused CRS dataset and then aggregates it to donor-year outputs with child-focus metrics.
@@ -73,7 +75,7 @@ Builds a multilateral-focused CRS dataset and then aggregates it to donor-year o
 ---
 
 ## 3) MUMS Script
-Script: `Scripts/MUMS script 27-02-2026.R`
+Script: `scripts/04_mums_imputation.R`
 
 ### Purpose
 Imports MUMS core-contribution data, joins CRS reference inputs, and imputes child-focus amounts using CRS multilateral child-focus percentages.
@@ -106,7 +108,7 @@ The donor CRS script is not an input to this multilateral imputation workflow.
 ---
 
 ## 4) Child-Focused ODA Summary Script
-Script: `Scripts/UNICEF CF Summary 04-2026.R`
+Script: `scripts/02_cf_summary.R`
 
 ### Purpose
 Produces an all-donor × year summary of child-focused ODA across DAC and EU Institutions donors, exported as a 12-tab Excel workbook. Runs independently on the full CRS dataset.
@@ -453,10 +455,10 @@ This analytical pipeline is designed to meet the standards of a reproducible ana
 - ✅ Repository published at [github.com/CRS-Data-scripts/UNICEF_CRS_Methodology](https://github.com/CRS-Data-scripts/UNICEF_CRS_Methodology)
 
 **Execution order for multilateral imputation outputs:**
-1. Run `Scripts/UNICEF Multilateral script 27-02-2026.R` to produce `Output/c_crs_multi_aggregated_parquet_wide.csv`.
-2. Run `Scripts/MUMS script 27-02-2026.R`, which uses that output plus `Input/Reference files/MUMS CRS Reference.csv` as the MUMS–CRS naming bridge.
+1. Run `scripts/03_multilateral_classification.R` to produce `Output/c_crs_multi_aggregated_parquet_wide.csv`.
+2. Run `scripts/04_mums_imputation.R`, which uses that output plus `Input/Reference files/MUMS CRS Reference.csv` as the MUMS–CRS naming bridge.
 
-The donor script (`UNICEF Donor Script Full.R`) and CF summary script (`UNICEF CF Summary 04-2026.R`) are each standalone workflows and are not required for the imputed multilateral output files.
+The donor script (`scripts/01_donor_classification.R`) and CF summary script (`scripts/02_cf_summary.R`) are each standalone workflows and are not required for the imputed multilateral output files.
 
 **Planned repository structure (illustrative):**
 ```
