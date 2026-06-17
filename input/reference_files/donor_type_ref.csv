@@ -1,0 +1,171 @@
+﻿donor_name,donor_code,donor_type,donor_type_DAC_EU
+Austria,1,DAC,DAC and EU Institutions
+Belgium,2,DAC,DAC and EU Institutions
+Denmark,3,DAC,DAC and EU Institutions
+France,4,DAC,DAC and EU Institutions
+Germany,5,DAC,DAC and EU Institutions
+Italy,6,DAC,DAC and EU Institutions
+Netherlands,7,DAC,DAC and EU Institutions
+Norway,8,DAC,DAC and EU Institutions
+Portugal,9,DAC,DAC and EU Institutions
+Sweden,10,DAC,DAC and EU Institutions
+Switzerland,11,DAC,DAC and EU Institutions
+United Kingdom,12,DAC,DAC and EU Institutions
+Finland,18,DAC,DAC and EU Institutions
+Iceland,20,DAC,DAC and EU Institutions
+Ireland,21,DAC,DAC and EU Institutions
+Luxembourg,22,DAC,DAC and EU Institutions
+Monaco,26,Non-DAC,Non-DAC
+Cyprus,30,Non-DAC,Non-DAC
+Greece,40,DAC,DAC and EU Institutions
+Malta,45,Non-DAC,Non-DAC
+Spain,50,DAC,DAC and EU Institutions
+Türkiye,55,Non-DAC,Non-DAC
+Slovenia,61,DAC,DAC and EU Institutions
+Croatia,62,Non-DAC,Non-DAC
+Czechia,68,DAC,DAC and EU Institutions
+Slovak Republic,69,DAC,DAC and EU Institutions
+Liechtenstein,70,Non-DAC,Non-DAC
+Bulgaria,72,Non-DAC,Non-DAC
+Hungary,75,DAC,DAC and EU Institutions
+Poland,76,DAC,DAC and EU Institutions
+Romania,77,Non-DAC,Non-DAC
+Estonia,82,DAC,DAC and EU Institutions
+Latvia,83,Non-DAC,Non-DAC
+Lithuania,84,DAC,DAC and EU Institutions
+Russia,87,Non-DAC,Non-DAC
+Nordic Development Fund,104,Multilateral,Multilateral
+Canada,301,DAC,DAC and EU Institutions
+United States,302,DAC,DAC and EU Institutions
+Israel,546,Non-DAC,Non-DAC
+Kuwait,552,Non-DAC,Non-DAC
+Qatar,561,Non-DAC,Non-DAC
+Saudi Arabia,566,Non-DAC,Non-DAC
+United Arab Emirates,576,Non-DAC,Non-DAC
+Azerbaijan,611,Non-DAC,Non-DAC
+Kazakhstan,613,Non-DAC,Non-DAC
+Japan,701,DAC,DAC and EU Institutions
+Chinese Taipei,732,Non-DAC,Non-DAC
+Korea,742,DAC,DAC and EU Institutions
+Thailand,764,Non-DAC,Non-DAC
+Timor-Leste,765,Non-DAC,Non-DAC
+Australia,801,DAC,DAC and EU Institutions
+UNEP,807,Multilateral,Multilateral
+Global Environment Facility,811,Multilateral,Multilateral
+Montreal Protocol,812,Multilateral,Multilateral
+New Zealand,820,DAC,DAC and EU Institutions
+International Bank for Reconstruction and Development,901,Multilateral,Multilateral
+International Finance Corporation,903,Multilateral,Multilateral
+International Development Association,905,Multilateral,Multilateral
+Caribbean Development Bank,906,Multilateral,Multilateral
+Inter-American Development Bank,909,Multilateral,Multilateral
+Central American Bank for Economic Integration,910,Multilateral,Multilateral
+African Development Bank,913,Multilateral,Multilateral
+African Development Fund,914,Multilateral,Multilateral
+Asian Development Bank,915,Multilateral,Multilateral
+EU Institutions,918,Multilateral,DAC and EU Institutions
+Arab Fund (AFESD),921,Multilateral,Multilateral
+UN Peacebuilding Fund,923,Multilateral,Multilateral
+World Health Organisation,928,Multilateral,Multilateral
+Food and Agriculture Organisation,932,Multilateral,Multilateral
+International Labour Organisation,940,Multilateral,Multilateral
+International Atomic Energy Agency,944,Multilateral,Multilateral
+UNECE,948,Multilateral,Multilateral
+OPEC Fund for International Development,951,Multilateral,Multilateral
+Arab Bank for Economic Development in Africa,953,Multilateral,Multilateral
+IMF (Concessional Trust Funds),958,Multilateral,Multilateral
+UNDP,959,Multilateral,Multilateral
+United Nations Conference on Trade and Development,962,Multilateral,Multilateral
+UNICEF,963,Multilateral,Multilateral
+UNRWA,964,Multilateral,Multilateral
+WFP,966,Multilateral,Multilateral
+UNHCR,967,Multilateral,Multilateral
+UNAIDS,971,Multilateral,Multilateral
+UNFPA,974,Multilateral,Multilateral
+Islamic Development Bank,976,Multilateral,Multilateral
+OSCE,978,Multilateral,Multilateral
+Black Sea Trade & Development Bank,981,Multilateral,Multilateral
+IFAD,988,Multilateral,Multilateral
+European Bank for Reconstruction and Development,990,Multilateral,Multilateral
+Climate Investment Funds,1011,Multilateral,Multilateral
+Adaptation Fund,1012,Multilateral,Multilateral
+Council of Europe Development Bank,1013,Multilateral,Multilateral
+Private Infrastructure Development Group,1014,Multilateral,Multilateral
+Development Bank of Latin America,1015,Multilateral,Multilateral
+Green Climate Fund,1016,Multilateral,Multilateral
+IDB Invest,1019,Multilateral,Multilateral
+Central Emergency Response Fund,1020,Multilateral,Multilateral
+World Tourism Organisation,1023,Multilateral,Multilateral
+Asian Infrastructure Investment Bank,1024,Multilateral,Multilateral
+Center of Excellence in Finance,1025,Multilateral,Multilateral
+International Investment Bank,1037,Multilateral,Multilateral
+UN Institute for Disarmament Research,1038,Multilateral,Multilateral
+UN Capital Development Fund,1039,Multilateral,Multilateral
+UN Office on Drugs and Crime,1040,Multilateral,Multilateral
+Eurasian Fund for Stabilization and Development,1041,Multilateral,Multilateral
+New Development Bank,1044,Multilateral,Multilateral
+North American Development Bank,1045,Multilateral,Multilateral
+UN Women,1046,Multilateral,Multilateral
+COVID-19 Response and Recovery Multi-Partner Trust Fund,1047,Multilateral,Multilateral
+Joint Sustainable Development Goals Fund,1048,Multilateral,Multilateral
+International Commission on Missing Persons,1049,Multilateral,Multilateral
+WHO-Strategic Preparedness and Response Plan,1050,Multilateral,Multilateral
+International Centre for Genetic Engineering and Biotechnology,1052,Multilateral,Multilateral
+Asian Forest Cooperation Organisation,1053,Multilateral,Multilateral
+World Organisation for Animal Health,1054,Multilateral,Multilateral
+CGIAR,1055,Multilateral,Multilateral
+UN Development Coordination Office,1057,Multilateral,Multilateral
+IMF Resilience and Sustainability Trust,1058,Multilateral,Multilateral
+Global Alliance for Vaccines and Immunization,1311,Multilateral,Multilateral
+Global Fund,1312,Multilateral,Multilateral
+Global Green Growth Institute,1313,Multilateral,Multilateral
+WTO - International Trade Centre,1401,Multilateral,Multilateral
+UN Economic and Social Commission for Western Asia,1403,Multilateral,Multilateral
+World Trade Organisation,1404,Multilateral,Multilateral
+United Nations Industrial Development Organization,1406,Multilateral,Multilateral
+Gates Foundation,1601,Private,Private
+Dutch Postcode Lottery,1602,Private,Private
+Swedish Postcode Lottery,1603,Private,Private
+People's Postcode Lottery,1604,Private,Private
+MetLife Foundation,1605,Private,Private
+Mastercard Foundation,1606,Private,Private
+IKEA Foundation,1608,Private,Private
+Van Leer Foundation,1609,Private,Private
+MAVA Foundation,1610,Private,Private
+Oak Foundation,1611,Private,Private
+H&M Foundation,1612,Private,Private
+Laudes Foundation,1613,Private,Private
+Charity Projects Ltd (Comic Relief),1614,Private,Private
+Children's Investment Fund Foundation,1615,Private,Private
+Gatsby Charitable Foundation,1616,Private,Private
+Conrad N. Hilton Foundation,1617,Private,Private
+David and Lucile Packard Foundation,1618,Private,Private
+John D. and Catherine T. MacArthur Foundation,1619,Private,Private
+Carnegie Corporation of New York,1620,Private,Private
+Michael & Susan Dell Foundation,1621,Private,Private
+"Omidyar Network Fund, Inc.",1622,Private,Private
+Rockefeller Foundation,1623,Private,Private
+William and Flora Hewlett Foundation,1624,Private,Private
+Arcus Foundation,1625,Private,Private
+Gordon and Betty Moore Foundation,1626,Private,Private
+Ford Foundation,1627,Private,Private
+Wellcome Trust,1628,Private,Private
+UBS Optimus Foundation,1629,Private,Private
+World Diabetes Foundation,1630,Private,Private
+McKnight Foundation,1631,Private,Private
+Citi Foundation,1632,Private,Private
+LEGO Foundation,1633,Private,Private
+Norwegian Postcode Lottery,1634,Private,Private
+Jacobs Foundation,1636,Private,Private
+Arcadia,1637,Private,Private
+Margaret A. Cargill Foundation,1638,Private,Private
+La Caixa Banking Foundation,1639,Private,Private
+Bloomberg Family Foundation,1640,Private,Private
+Susan T. Buffett Foundation,1641,Private,Private
+Howard G. Buffett Foundation,1642,Private,Private
+Open Society Foundations,1643,Private,Private
+Fondation Botnar,1644,Private,Private
+Bezos Earth Fund,1646,Private,Private
+German Postcode Lottery,1647,Private,Private
+Leona M. and Harry B. Helmsley Charitable Trust,1648,Private,Private
+Good Ventures Foundation,1650,Private,Private
